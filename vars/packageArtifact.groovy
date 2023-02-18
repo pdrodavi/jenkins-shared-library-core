@@ -1,5 +1,5 @@
 def call() {
-    readFile 'dev.yaml'
+    readYaml('dev.yaml')
     echo readMavenPom().getArtifactId()
     echo readMavenPom().getVersion()
     echo "Realizando construção do artefato"
