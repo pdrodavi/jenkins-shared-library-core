@@ -2,11 +2,11 @@ def call() {
     node {
 
         stage("Checkout") {
-            gitCheckoutGitlab()
+            gitCheckoutArchetypeSpring()
         }
 
         stage("Create Project") {
-            createRepositoryGitlab()
+            createRepositoryFromArchetypeSpring()
         }
 
     }
