@@ -1,3 +1,5 @@
+import br.dev.pedrodavi.Constants
+
 def call() {
 
     inputPublish = input([
@@ -8,7 +10,7 @@ def call() {
     ])
 
     if ("${inputPublish}" == 'Yes') {
-        withDockerRegistry(credentialsId: 'JFROG-PLATAFORM', url: 'https://srvextechnology.jfrog.io/artifactory/registry-docker/') {
+        withDockerRegistry(credentialsId: Constants.JENKINS_JFROG_CREDENTIALS_ID, url: Constants.JENKINS_JFROG_URL_REGISTRY) {
             sh "docker tag ${env.JOB_BASE_NAME} srvextechnology.jfrog.io/registry-docker/${env.JOB_BASE_NAME}:latest"
             sh "docker push srvextechnology.jfrog.io/registry-docker/${env.JOB_BASE_NAME}:latest"
         }
