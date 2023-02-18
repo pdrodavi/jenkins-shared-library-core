@@ -3,6 +3,7 @@ def call() {
         sh "docker container stop ${env.JOB_BASE_NAME}"
         sh "docker container rm -f ${env.JOB_BASE_NAME}"
     } catch (err) {
+        currentBuild.result = 'SUCCESS'
         log("info", err.getMessage().toString())
     }
 
