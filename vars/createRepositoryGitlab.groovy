@@ -2,6 +2,8 @@ import br.dev.pedrodavi.Constants
 
 def call(){
 
+    agent none
+
     inputNameRepo = input([
             message: 'Name Project Repository',
             parameters: [
