@@ -22,7 +22,6 @@ def call(Map args) {
         }
 
         stage("Deploying") {
-//            sh "./mvnw package -DskipTests=true"
             startContainer()
         }
 
