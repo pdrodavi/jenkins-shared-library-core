@@ -8,7 +8,7 @@ def call() {
     ])
 
     echo "Nome do projeto: ${inputName}"
-    $NAMEPRJ = ${inputName}
+    env.NAMEPRJ = ${inputName}
     echo "NOME: $NAMEPRJ"
 
 }
