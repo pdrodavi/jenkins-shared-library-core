@@ -9,15 +9,5 @@ def call() {
 
     echo "Nome do projeto: ${inputName}"
 
-    pipelineJob(${inputName}) {
-        definition {
-            cpsScm {
-                scm {
-                    git('https://github.com/jenkinsci/job-dsl-plugin.git')
-                }
-            }
-        }
-    }
-
 }
 
