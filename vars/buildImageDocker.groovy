@@ -1,4 +1,4 @@
 def call() {
     echo "Criando a imagem Docker"
-    sh "docker build -t ${env.JOB_BASE_NAME} ."
+    sh "docker build -t ${readMavenPom().getArtifactId()}:${readMavenPom().getVersion()} ."
 }
