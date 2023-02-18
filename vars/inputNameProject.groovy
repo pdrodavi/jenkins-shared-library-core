@@ -9,5 +9,9 @@ def call() {
 
     echo "Nome do projeto: ${inputName}"
 
+    environment {
+        NAME-PROJECT = "${inputName}"
+    }
+
 }
 

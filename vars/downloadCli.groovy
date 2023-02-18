@@ -10,5 +10,7 @@ def call() {
         sh "java -jar jenkins-cli.jar -s http://host.docker.internal:8080/ -auth devops:${JENKINSCLITOKEN} -webSocket help"
     }
 
+    echo "${env.NAME-PROJECT}"
+
 }
 
