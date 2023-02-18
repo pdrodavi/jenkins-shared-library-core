@@ -1,5 +1,6 @@
 def call() {
-    readYaml('dev.yaml')
+    def props = readJSON file: 'dev.json'
+    echo props['ambiente']
     echo readMavenPom().getArtifactId()
     echo readMavenPom().getVersion()
     echo "Realizando construção do artefato"
