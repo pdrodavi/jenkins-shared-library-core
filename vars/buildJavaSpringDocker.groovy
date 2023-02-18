@@ -1,6 +1,5 @@
 def call(Map args) {
     node {
-
         stage("Checkout") {
             gitCheckout(args.repo)
         }

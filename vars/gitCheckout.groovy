@@ -1,6 +1,6 @@
 import br.dev.pedrodavi.Constants
 
-def call(Map args){
+def call(String repo){
 
     inputBranch = input([
             message: 'Input branch',
@@ -11,6 +11,6 @@ def call(Map args){
 
     echo "Branch selecionada: ${inputBranch}"
 
-    git branch: "${inputBranch}", credentialsId: Constants.JENKINS_GITHUB_CREDENTIALS_ID, url: "https://github.com/pdrodavi/${args.repo}.git"
+    git branch: "${inputBranch}", credentialsId: Constants.JENKINS_GITHUB_CREDENTIALS_ID, url: "https://github.com/pdrodavi/${repo}.git"
 
 }
