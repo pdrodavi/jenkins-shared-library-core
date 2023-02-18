@@ -13,5 +13,9 @@ def call() {
             downloadCli()
         }
 
+        stage("Create Job") {
+            createJob()
+        }
+
     }
 }
