@@ -9,13 +9,14 @@ def call() {
             inputNameProject()
         }
 
+        /*
         stage("Download CLI") {
             downloadCli()
         }
 
         stage("Create Job") {
             createJob()
-        }
+        }*/
 
     }
 }
