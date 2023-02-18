@@ -7,8 +7,8 @@ def call() {
 //    sh "java -jar jenkins-cli.jar -s http://host.docker.internal:8080/ -auth devops:11820e9b79637e6ae7cf649428d97b4352 -webSocket help"
 
     withCredentials([string(credentialsId: 'cli-jenkins-token', variable: 'JENKINSCLITOKEN')]) {
-        sh "java -jar jenkins-cli.jar -s http://host.docker.internal:8080/ -auth devops:${JENKINSCLITOKEN} -webSocket help"
-        sh "java -jar jenkins-cli.jar -s http://host.docker.internal:8080/ -webSocket create-job app-test"
+//        sh "java -jar jenkins-cli.jar -s http://host.docker.internal:8080/ -auth devops:${JENKINSCLITOKEN} -webSocket help"
+        sh "java -jar jenkins-cli.jar -s http://host.docker.internal:8080/ -auth devops:${JENKINSCLITOKEN} -webSocket create-job app-test"
     }
 
 }
