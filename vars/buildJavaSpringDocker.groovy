@@ -5,6 +5,7 @@ def call(Map args) {
     node {
 
         stage("Checkout") {
+            gitCheckout()
             git branch: "${args.branch}", credentialsId: Constants.JENKINS_GITHUB_CREDENTIALS_ID, url: "https://github.com/pdrodavi/${args.repo}.git"
         }
 
