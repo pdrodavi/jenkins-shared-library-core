@@ -3,6 +3,7 @@ def call() {
 
         stage("Checkout") {
             log("debug", "Entrou no checkout")
+            agent none
             gitCheckoutGitlab()
         }
 
