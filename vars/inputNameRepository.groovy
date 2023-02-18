@@ -18,7 +18,7 @@ def call(String repo){
                 "  -H \"Authorization: Bearer ${GITHUBRESTJWT}\"\\\n" +
                 "  -H \"X-GitHub-Api-Version: 2022-11-28\" \\\n" +
                 "  ${Constants.JENKINS_GITHUB_URL_API_REPOS} \\\n" +
-                "  -d '{\"name\":\"${inputNameRepo}\",\"description\":\"This is your first repository\",\"homepage\":\"https://github.com\",\"private\":false,\"has_issues\":true,\"has_projects\":true,\"has_wiki\":true}'"
+                "  -d '{\"name\":\"${inputNameRepo}\",\"description\":\"This is your first repository\",\"homepage\":\"https://github.com\",\"private\":true,\"has_issues\":true,\"has_projects\":true,\"has_wiki\":true}'"
     }
 
 }
