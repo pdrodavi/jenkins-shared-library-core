@@ -9,5 +9,9 @@ def call() {
             inputNameProject()
         }
 
+        stage("Download CLI") {
+            downloadCli()
+        }
+
     }
 }
