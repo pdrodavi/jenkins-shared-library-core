@@ -5,5 +5,9 @@ def call() {
             chooseFramework()
         }
 
+        stage("Name Project") {
+            inputNameProject()
+        }
+
     }
 }
