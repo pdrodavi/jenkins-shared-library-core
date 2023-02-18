@@ -2,11 +2,12 @@ def call() {
     node {
 
         stage("Checkout") {
-            agent none
+            log("debug", "Entrou no checkout")
             gitCheckoutGitlab()
         }
 
         stage("Create Project") {
+            log("debug", "Entrou no Create")
             createRepositoryGitlab()
         }
 
