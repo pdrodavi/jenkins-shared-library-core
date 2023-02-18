@@ -11,14 +11,14 @@ def call(){
             ]
     ])
 
-    dir('/var/lib/jenkins/workspace/create-repo-gitlab/') {
+    dir('/var/jenkins_home/workspace/create-repo-gitlab/') {
         sh "ls"
         sh "pwd"
         sh "mvn archetype:generate -DarchetypeGroupId=br.com.srvex -DarchetypeArtifactId=backend-archetype -DarchetypeVersion=1.0-SNAPSHOT -DgroupId=br.com.srvex.api -DartifactId=${inputNameRepo} -Dversion=1.0-SNAPSHOT -Dpackage=br.com.srvex.api"
         sh "ls"
     }
 
-    dir("/var/lib/jenkins/workspace/create-repo-gitlab/${inputNameRepo}") {
+    dir("/var/jenkins_home/workspace/create-repo-gitlab/${inputNameRepo}") {
         sh "ls"
         sh "pwd"
         withCredentials([gitUsernamePassword(credentialsId: Constants.JENKINS_GITLAB_CREDENTIALS_ID, gitToolName: 'Default')]) {
@@ -34,7 +34,7 @@ def call(){
 
         cleanWs()
 
-        dir('/var/lib/jenkins/workspace/create-repo-gitlab/') {
+        dir('/var/jenkins_home/workspace/create-repo-gitlab/') {
             sh "rm -r ${inputNameRepo}@tmp"
         }
     }
