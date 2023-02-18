@@ -1,6 +1,6 @@
 import br.dev.pedrodavi.Constants
 
-def call(String repo){
+def call(){
 
     inputNameRepo = input([
             message: 'Name of Repository',
