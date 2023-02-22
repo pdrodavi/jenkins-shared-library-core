@@ -8,6 +8,8 @@ def call() {
     ])
 
     echo "Nome do projeto: ${inputName}"
+    echo "GIT: https://git.example.com.br/devops/${inputName}.git"
+    echo "Pipeline: https://jenkins.example.com.br/job/${inputName}/"
 
 }
 
